@@ -13,6 +13,9 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.InputStream;
 
+import static edu.orangecoastcollege.cs273.ocmusicevents2.R.id.eventImageView;
+import static edu.orangecoastcollege.cs273.ocmusicevents2.R.id.eventTitleTextView;
+
 public class EventDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -25,26 +28,33 @@ public class EventDetailsActivity extends AppCompatActivity {
 
         String title = intent.getStringExtra("Title");
         String details = intent.getStringExtra("Details");
+        String time = intent.
         String imageFileName = title.replace(" ", "") + ".jpeg";
 
-        ImageView eventImageView = (ImageView) findViewById(R.id.eventImageView);
-        TextView eventTitleTextView = (TextView) findViewById(R.id.eventTitleTextView);
-        TextView eventDetailsTextView = (TextView) findViewById(R.id.eventDetailsTextView);
+        ImageView mEventImageView = (ImageView) findViewById(eventImageView);
+        TextView mEventTitleTextView = (TextView) findViewById(eventTitleTextView);
+        TextView mEventDateDayTextView = (TextView) findViewById(R.id.eventDateDayTextView);
+        TextView mEventTimeTextView = (TextView) findViewById(R.id.eventTimeTextView);
+        TextView mEventLocationTextView = (TextView) findViewById(R.id.eventLocationTextView);
+        TextView mEventAddress1TextView = (TextView) findViewById(R.id.eventAddress1TextView);
+        TextView mEventAddress2TextView = (TextView) findViewById(R.id.eventAddress2TextView);
 
         AssetManager am = this.getAssets();
         try {
             InputStream stream = am.open(imageFileName);
             Drawable image = Drawable.createFromStream(stream, title);
-            eventImageView.setImageDrawable(image);
+            mEventImageView.setImageDrawable(image);
         }
         catch (IOException e)
         {
             Log.e("OC Music Events", "Error loading image: " + imageFileName, e);
         }
-        eventTitleTextView.setText(title);
-        eventDetailsTextView.setText(details);
-
-
+        mEventTitleTextView.setText(title);
+        mEventDateDayTextView.setText(details);
+        mEventTimeTextView.setText();
+        mEventLocationTextView.setText();
+        mEventAddress1TextView.setText();
+        mEventAddress2TextView.setText();
     }
 
     protected void goBackToList(View v)

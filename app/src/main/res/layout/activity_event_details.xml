@@ -28,16 +28,16 @@
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginBottom="20dp"
-        android:text="TextView"
-        android:textSize="@dimens/event_title_text_size"/>
+        android:text="Title"
+        android:textSize="@dimen/event_title_text_size" />
 
     <TextView
-        android:id="@+id/eventDayTextView"
+        android:id="@+id/eventDateDayTextView"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.10"
-        android:text="TextView" />
+        android:text="DateDay" />
 
     <TextView
         android:id="@+id/eventTimeTextView"
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.10"
-        android:text="TextView" />
+        android:text="Time" />
 
     <TextView
         android:id="@+id/eventLocationTextView"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.10"
-        android:text="TextView" />
+        android:text="Address1" />
 
     <TextView
         android:id="@+id/eventAddress2TextView"
@@ -69,6 +69,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="0.10"
-        android:text="TextView" />
+        android:text="Address2" />
 
 </LinearLayout>
