@@ -12,63 +12,57 @@
 
     <ImageView
         android:id="@+id/eventImageView"
-        android:layout_width="350dp"
-        android:layout_height="286dp"
+        android:layout_width="@dimen/detail_image_width"
+        android:layout_height="@dimen/detail_image_height"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="20dp"
-
+        android:paddingBottom="@dimen/detail_image_bottom_padding"
+        android:paddingTop="@dimen/detail_image_top_padding"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         app:srcCompat="@mipmap/ic_launcher"
-        android:layout_weight="0.10" />
+        android:layout_weight="0.62" />
 
     <TextView
         android:id="@+id/eventTitleTextView"
-        android:layout_width="350dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/details_text_view_width"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="20dp"
-        android:text="Title"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
         android:textSize="@dimen/event_title_text_size" />
 
     <TextView
         android:id="@+id/eventDateDayTextView"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/details_text_view_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.10"
-        android:text="DateDay" />
+        android:textSize="@dimen/event_details_text_size"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eventTimeTextView"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/details_text_view_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.10"
-        android:text="Time" />
+        android:textSize="@dimen/event_details_text_size"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eventLocationTextView"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/details_text_view_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.10"
-        android:text="TextView" />
+        android:textSize="@dimen/event_details_text_size"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eventAddress1TextView"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/details_text_view_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.10"
-        android:text="Address1" />
+        android:textSize="@dimen/event_details_text_size"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/eventAddress2TextView"
-        android:layout_width="350dp"
+        android:layout_width="@dimen/details_text_view_width"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_weight="0.10"
-        android:text="Address2" />
+        android:textSize="@dimen/event_details_text_size"
+        android:layout_gravity="center" />
 
 </LinearLayout>

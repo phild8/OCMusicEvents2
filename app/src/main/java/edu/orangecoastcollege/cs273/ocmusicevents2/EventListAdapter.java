@@ -19,6 +19,8 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
+ * This is a interface Creates a object that will be displayed in a ListView. The the object will
+ * have a picture title and details.
  *
  * @author Phillip Davis
  * @version 1.0
@@ -43,8 +45,15 @@ public class EventListAdapter extends ArrayAdapter<MusicEvent>{
         mAllEventsList = allMusicEvents;
     }
 
-    // TODO: Override method called getView
-
+    /**
+     * This inflates the view object and loads the views for the object to display. ImageView,
+     * TextView, and another TextView.
+     *
+     * @param position The position the object is in the ListView.
+     * @param convertView @Nullable
+     * @param parent @NonNull
+     * @return The the ListViewItem to add to the list.
+     */
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {

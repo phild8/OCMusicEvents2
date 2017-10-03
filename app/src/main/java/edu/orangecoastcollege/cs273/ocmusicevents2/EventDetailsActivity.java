@@ -6,7 +6,6 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +15,14 @@ import java.io.InputStream;
 import static edu.orangecoastcollege.cs273.ocmusicevents2.R.id.eventImageView;
 import static edu.orangecoastcollege.cs273.ocmusicevents2.R.id.eventTitleTextView;
 
+/**
+ * The controller for the second activity. Loads a summary and picture about the bad a selected.
+ * Displays the title, date, time, location, address1, address2, and the image.
+ *
+ * @author Phillip Davis
+ * @version 1.0
+ *
+ */
 public class EventDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -27,8 +34,11 @@ public class EventDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
 
         String title = intent.getStringExtra("Title");
-        String details = intent.getStringExtra("Details");
-        String time = intent.
+        String date = intent.getStringExtra("Date");
+        String time = intent.getStringExtra("Time");
+        String location = intent.getStringExtra("Location");
+        String address1 = intent.getStringExtra("Address1");
+        String address2 = intent.getStringExtra("Address2");
         String imageFileName = title.replace(" ", "") + ".jpeg";
 
         ImageView mEventImageView = (ImageView) findViewById(eventImageView);
@@ -50,15 +60,10 @@ public class EventDetailsActivity extends AppCompatActivity {
             Log.e("OC Music Events", "Error loading image: " + imageFileName, e);
         }
         mEventTitleTextView.setText(title);
-        mEventDateDayTextView.setText(details);
-        mEventTimeTextView.setText();
-        mEventLocationTextView.setText();
-        mEventAddress1TextView.setText();
-        mEventAddress2TextView.setText();
-    }
-
-    protected void goBackToList(View v)
-    {
-        finish();
+        mEventDateDayTextView.setText(date);
+        mEventTimeTextView.setText(time);
+        mEventLocationTextView.setText(location);
+        mEventAddress1TextView.setText(address1);
+        mEventAddress2TextView.setText(address2);
     }
 }

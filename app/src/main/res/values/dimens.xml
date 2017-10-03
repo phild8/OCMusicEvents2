@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="event_title_text_size">18sp</dimen>
-    <dimen name="event_details_text_size">14sp</dimen>
+    <!-- activity_event_details XML -->
+    <dimen name="detail_image_height">380dp</dimen>
+    <dimen name="detail_image_width">400dp</dimen>
+    <dimen name="detail_image_bottom_padding">5dp</dimen>
+    <dimen name="detail_image_top_padding">5dp</dimen>
+
+    <dimen name="details_text_view_width">350dp</dimen>
+
+    <dimen name="title_margin_bottom">15dp</dimen>
+    <dimen name="event_title_text_size">36sp</dimen>
+
+    <dimen name="event_details_text_size">18sp</dimen>
+
+    <!-- music_event_list_item XML-->
+    <dimen name="events_linear_layout_size">60dp</dimen>
+    <dimen name="image_margin">8dp</dimen>
+
+    <dimen name="title_item_height">35dp</dimen>
+    <dimen name="title_item_text_size">24sp</dimen>
+
+    <dimen name="date_item_height">25dp</dimen>
+    <dimen name="date_item_text_size">12sp</dimen>
 </resources>

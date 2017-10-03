@@ -10,11 +10,23 @@ import android.widget.ListView;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * The Controller of the first activity. Loads and displays a ListView with ListViewItems of
+ * images, titles, and dates. Allows the user to interact with the UI and select a band that
+ * they would like to find out more about.
+ *
+ * @author Phillip Davis
+ * @version 1
+ */
 public class EventListActivity extends ListActivity {
 
     private List<MusicEvent> mAllEventsList;
 
 
+    /**
+     * Loads the ListView that has the ListItemViews inside.
+     * @param savedInstanceState Loads a saved instance if there is one.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +43,15 @@ public class EventListActivity extends ListActivity {
 
     }
 
+    /**
+     * Starts the second activity. The activity is based on the ListViewItem that the user has
+     * selected. The the activity sends the title, date, date, time, location, address1,
+     * address2, and the imagename to the second activity.
+     * @param l The ListView that contains the data to be displayed
+     * @param v The ListViewItem that user has selected.
+     * @param position The position of the ListViewItem inside of the ListView
+     * @param id the ID of the ListViewItem
+     */
     @Override
     protected void onListItemClick(ListView l, View v, int position, long id) {
 
