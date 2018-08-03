@@ -41,13 +41,13 @@ public class EventDetailsActivity extends AppCompatActivity {
         String address2 = intent.getStringExtra("Address2");
         String imageFileName = title.replace(" ", "") + ".jpeg";
 
-        ImageView mEventImageView = (ImageView) findViewById(eventImageView);
-        TextView mEventTitleTextView = (TextView) findViewById(eventTitleTextView);
-        TextView mEventDateDayTextView = (TextView) findViewById(R.id.eventDateDayTextView);
-        TextView mEventTimeTextView = (TextView) findViewById(R.id.eventTimeTextView);
-        TextView mEventLocationTextView = (TextView) findViewById(R.id.eventLocationTextView);
-        TextView mEventAddress1TextView = (TextView) findViewById(R.id.eventAddress1TextView);
-        TextView mEventAddress2TextView = (TextView) findViewById(R.id.eventAddress2TextView);
+        ImageView mEventImageView = findViewById(eventImageView);
+        TextView mEventTitleTextView = findViewById(eventTitleTextView);
+        TextView mEventDateDayTextView = findViewById(R.id.eventDateDayTextView);
+        TextView mEventTimeTextView = findViewById(R.id.eventTimeTextView);
+        TextView mEventLocationTextView = findViewById(R.id.eventLocationTextView);
+        TextView mEventAddress1TextView = findViewById(R.id.eventAddress1TextView);
+        TextView mEventAddress2TextView = findViewById(R.id.eventAddress2TextView);
 
         AssetManager am = this.getAssets();
         try {
