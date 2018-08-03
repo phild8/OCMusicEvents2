@@ -63,9 +63,9 @@ public class EventListAdapter extends ArrayAdapter<MusicEvent>{
         // Inflating the custom layout for one single item in the list (repeated  multiple times)
         View listItemView = inflater.inflate(mResource, null);
 
-        ImageView listItemImageView = (ImageView) listItemView.findViewById(R.id.listItemImageView);
-        TextView listItemTitleTextView = (TextView) listItemView.findViewById(R.id.listItemTitleTextView);
-        TextView listItemDateTextView = (TextView) listItemView.findViewById(R.id.listItemDateTextView);
+        ImageView listItemImageView = listItemView.findViewById(R.id.listItemImageView);
+        TextView listItemTitleTextView = listItemView.findViewById(R.id.listItemTitleTextView);
+        TextView listItemDateTextView = listItemView.findViewById(R.id.listItemDateTextView);
 
         MusicEvent selectedEvent = mAllEventsList.get(position);
         listItemTitleTextView.setText(selectedEvent.getTitle());
