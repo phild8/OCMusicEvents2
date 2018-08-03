@@ -1,5 +1,7 @@
 package edu.orangecoastcollege.cs273.ocmusicevents2;
 
+import java.util.Objects;
+
 /**
  * The MusicEvent class is a place holder for data corresponding to music events
  * occurring within Orange County, including title, date, day, time, location,
@@ -81,5 +83,40 @@ public class MusicEvent {
 
     public void setImageName(String imageName) {
         mImageName = imageName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof MusicEvent)) return false;
+        MusicEvent that = (MusicEvent) o;
+        return Objects.equals(mTitle, that.mTitle) &&
+                Objects.equals(mDate, that.mDate) &&
+                Objects.equals(mDay, that.mDay) &&
+                Objects.equals(mTime, that.mTime) &&
+                Objects.equals(mLocation, that.mLocation) &&
+                Objects.equals(mAddress1, that.mAddress1) &&
+                Objects.equals(mAddress2, that.mAddress2) &&
+                Objects.equals(mImageName, that.mImageName);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(mTitle, mDate, mDay, mTime, mLocation, mAddress1, mAddress2, mImageName);
+    }
+
+    @Override
+    public String toString() {
+        return "MusicEvent{" +
+                "mTitle='" + mTitle + '\'' +
+                ", mDate='" + mDate + '\'' +
+                ", mDay='" + mDay + '\'' +
+                ", mTime='" + mTime + '\'' +
+                ", mLocation='" + mLocation + '\'' +
+                ", mAddress1='" + mAddress1 + '\'' +
+                ", mAddress2='" + mAddress2 + '\'' +
+                ", mImageName='" + mImageName + '\'' +
+                '}';
     }
 }
